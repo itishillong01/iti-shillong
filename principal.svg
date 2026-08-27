@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="300" height="360" role="img" aria-label="Placeholder photograph of the Principal">
+  <rect width="300" height="360" fill="#e9edf0"/>
+  <circle cx="150" cy="140" r="60" fill="#c7d0d8"/>
+  <rect x="70" y="220" width="160" height="110" rx="8" fill="#c7d0d8"/>
+  <text x="150" y="300" font-family="Arial, sans-serif" font-size="14" fill="#5b6b79" text-anchor="middle">
+    Principal's photo
+  </text>
+  <text x="150" y="320" font-family="Arial, sans-serif" font-size="12" fill="#5b6b79" text-anchor="middle">
+    (to be replaced)
+  </text>
+</svg>

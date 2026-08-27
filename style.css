@@ -1,0 +1,508 @@
+/* =========================================================
+   ITI Shillong — Stylesheet
+   Simple, restrained, institutional design.
+   System fonts only (no external font dependency).
+   ========================================================= */
+
+:root {
+  /* Colors */
+  --color-navy: #0e3a5f;
+  --color-navy-dark: #082a45;
+  --color-maroon: #7a1f2b;
+  --color-gold: #b7862c;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f6f8;
+  --color-text: #1f2933;
+  --color-text-muted: #5b6b79;
+  --color-border: #d9dfe4;
+  --color-focus: #1a73b5;
+
+  /* Type */
+  --font-display: Georgia, 'Times New Roman', Times, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --max-width: 1100px;
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+a:hover { color: var(--color-maroon); }
+
+/* Visible focus state for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Skip link for keyboard/screen-reader users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-navy);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+  border-radius: var(--radius);
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  background: var(--color-navy);
+  color: #fff;
+  border-bottom: 4px solid var(--color-gold);
+}
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: #fff;
+}
+.brand:hover { color: #fff; opacity: 0.9; }
+
+.brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.brand-text .brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-text .brand-sub {
+  font-size: 0.78rem;
+  color: #cfe0ee;
+  letter-spacing: 0.03em;
+}
+
+/* Nav toggle (hamburger) — hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.main-nav a[aria-current="page"] {
+  background: rgba(255,255,255,0.18);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-gold);
+}
+
+@media (max-width: 780px) {
+  .nav-toggle { display: inline-block; }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 0.5rem;
+  }
+
+  .main-nav.open { display: block; }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .main-nav a { padding: 0.75rem 0.5rem; }
+}
+
+/* =========================================================
+   HERO (Home page)
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(rgba(8,42,69,0.72), rgba(8,42,69,0.72)), url("../images/iti-shillong.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem 1.25rem;
+}
+
+.hero-inner { max-width: 780px; }
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  margin: 0 0 0.75rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #e4edf3;
+  margin: 0;
+}
+
+/* =========================================================
+   GENERIC SECTIONS
+   ========================================================= */
+
+.section {
+  padding: 2.75rem 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  color: var(--color-navy);
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  border-bottom: 3px solid var(--color-gold);
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+.placeholder-text {
+  background: #fff8e6;
+  border: 1px dashed var(--color-gold);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius);
+}
+
+.placeholder-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* =========================================================
+   NOTICES (Home page — signature element)
+   Styled as a simple institutional notice board:
+   a dated, numbered ledger rather than a decorative card grid.
+   ========================================================= */
+
+.notice-board {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.notice-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.notice-date {
+  flex: 0 0 auto;
+  width: 84px;
+  text-align: center;
+  border-left: 3px solid var(--color-navy);
+  padding-left: 0.6rem;
+}
+
+.notice-date .day {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.1;
+}
+
+.notice-date .month-year {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.notice-content { flex: 1 1 auto; min-width: 0; }
+
+.notice-content h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.notice-important {
+  display: inline-block;
+  background: var(--color-maroon);
+  color: #fff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius);
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.notice-desc {
+  margin: 0 0 0.6rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-navy);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  min-height: 44px; /* comfortable tap target on mobile */
+}
+
+.notice-link:hover,
+.notice-link:focus-visible {
+  background: var(--color-navy-dark);
+  color: #fff;
+}
+
+.notice-status {
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+/* =========================================================
+   CARDS (Trades page)
+   ========================================================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.trade-card {
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.trade-card h3 {
+  margin: 0 0 0.35rem;
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.trade-duration {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+/* =========================================================
+   PRINCIPAL PAGE
+   ========================================================= */
+
+.principal-layout {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.principal-photo {
+  flex: 0 0 220px;
+  width: 220px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.principal-info { flex: 1 1 360px; min-width: 260px; }
+
+.principal-info h2 {
+  margin-top: 0;
+}
+
+.principal-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 0.15rem;
+  color: var(--color-text);
+}
+
+.principal-title {
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.contact-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-list .label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--color-navy);
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  min-height: 44px;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  background: var(--color-bg-alt);
+}
+
+.social-link svg { flex-shrink: 0; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background: var(--color-navy-dark);
+  color: #dbe4ea;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.site-footer p { margin: 0.2rem 0; }
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

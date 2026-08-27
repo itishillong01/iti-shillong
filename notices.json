@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Sample Notice — Replace or Delete This Entry",
+    "date": "2026-08-27",
+    "description": "This is a placeholder notice so you can see how notices look on the Home page. Follow the README to replace it with a real notice and PDF.",
+    "pdf": "notices/sample-notice.pdf",
+    "important": false
+  }
+]
