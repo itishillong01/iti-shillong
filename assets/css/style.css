@@ -40,6 +40,8 @@ body {
   background: var(--color-bg);
   line-height: 1.6;
    overflow-x: hidden;
+   overflow-wrapped: break-word;
+   word-break: break-word;
 }
 
 img { max-width: 100%; height: auto; display: block; }
