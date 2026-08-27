@@ -34,7 +34,7 @@ const SITE_DATA = {
     photo: "assets/images/principal.jpeg",
     message: [
       "Welcome to Industrial Training Institute Shillong. Our institute is dedicated to equipping students with practical, industry-relevant skills that prepare them for meaningful careers and self-employment.",
-      "We encourage every student to make the most of the training, workshops and guidance offered here, and we remain committed to maintaining high standards of discipline, safety and technical excellence."
+      "We encourage every trainee to make the most of the training, workshops and guidance offered here, and we remain committed to maintaining high standards of discipline, safety and technical excellence."
     ]
   },
 
