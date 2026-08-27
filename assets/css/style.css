@@ -42,6 +42,7 @@ body {
    overflow-x: hidden;
    overflow-wrapped: break-word;
    word-break: break-word;
+   direction: ltr;
 }
 
 img { max-width: 100%; height: auto; display: block; }
