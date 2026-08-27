@@ -4,6 +4,6 @@
     "date": "2026-08-27",
     "description": "This is an information Brochure of ITI Shillong",
     "pdf": "notices/Information-Brochure.pdf",
-    "new": true
+    "important": true
   }
 ]
