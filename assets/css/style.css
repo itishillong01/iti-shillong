@@ -512,20 +512,98 @@ input:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
 
-   @media (max-width: 780px) {
-      .principal-layout {
-         flex-direction: column;
-      }
-      .principal-photo {
-         width: min(220px, 100%);
-         flex-basis: auto;
-      }
-      .notice-item {
-         width: 100%;
-      }
-      .notice-content {
-         min-width: 0;
-         overflow-wrap: anywhere;
-      }
+/* =========================================================
+   MOBILE OVERFLOW FIX
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.site-header,
+.site-header .header-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.main-nav {
+  max-width: 100%;
+}
+
+.main-nav ul,
+.main-nav li,
+.main-nav a {
+  max-width: 100%;
+}
+
+.notice-content,
+.notice-content h3,
+.notice-desc {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.card-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.trade-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.principal-info {
+  min-width: 0;
+}
+
+img,
+svg,
+iframe,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-header .header-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 55px);
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-text .brand-name,
+  .brand-text .brand-sub {
+    overflow-wrap: anywhere;
+  }
+
+  .notice-item {
+    min-width: 0;
+  }
+
+  .notice-content {
+    min-width: 0;
+  }
 }
