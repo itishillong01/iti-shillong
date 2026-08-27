@@ -512,4 +512,20 @@ input:focus-visible,
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+
+   @media (max-width: 780px) {
+      .principal-layout {
+         flex-direction: column;
+      }
+      .principal-photo {
+         width: min(220px, 100%);
+         flex-basis: auto;
+      }
+      .notice-item {
+         width: 100%;
+      }
+      .notice-content {
+         min-width: 0;
+         overflow-wrap: anywhere;
+      }
 }
