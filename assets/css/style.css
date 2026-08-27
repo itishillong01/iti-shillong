@@ -417,7 +417,7 @@ input:focus-visible,
   overflow: hidden;
 }
 
-.principal-info { flex: 1 1 360px; min-width: 260px; }
+.principal-info { flex: 1 1 360px; min-width: 0px; }
 
 .principal-info h2 {
   margin-top: 0;
