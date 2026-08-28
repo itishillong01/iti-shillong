@@ -4,7 +4,7 @@
     "date": "2026-08-28",
     "description": "Lists of candidates eligible for counselling",
     "pdf": "notices/List-for-Counselling.pdf",
-    "new": true
+    "badgeType": "New"
   },
   {
     "title": "ITI Shillong information Brochure",
