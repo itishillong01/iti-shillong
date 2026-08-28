@@ -90,7 +90,7 @@
         dateHtml = '<div class="notice-date"><span class="month-year">Undated</span></div>';
       }
 
-      var importantHtml = notice.important
+      var importantHtml = notice.tag
         ? '<span class="notice-important">Important</span>'
         : "";
 
