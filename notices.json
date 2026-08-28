@@ -4,13 +4,13 @@
     "date": "2026-08-28",
     "description": "Lists of candidates eligible for counselling",
     "pdf": "notices/List-for-Counselling.pdf",
-    "important": true
+    "tag": "New"
   },
   {
     "title": "ITI Shillong information Brochure",
     "date": "2026-08-27",
     "description": "This is an information Brochure of ITI Shillong",
     "pdf": "notices/Information-Brochure.pdf",
-    "important": true
+    "tag": "New"
   }
 ]
