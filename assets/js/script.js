@@ -91,7 +91,7 @@
       }
 
       var importantHtml = notice.important
-        ? '<span class="notice-important">Important</span>'
+        ? '<span class="notice-important">New</span>'
         : "";
 
       var descHtml = notice.description
